@@ -315,7 +315,7 @@ void SaveEventToArchive(stEvent &Event, string FileName)
     if(MyFile.is_open())
     {
         line = ConvertRecordToLine(Event);
-        MyFile << line;
+        MyFile << line << "\n";
         MyFile.close();
     }
 }
@@ -621,4 +621,5 @@ int main()
 {
     MainMenueScreen();
     return 0;
+
 }
